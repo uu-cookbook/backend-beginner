@@ -1,5 +1,52 @@
+//S strict modem, není možné například pouřít nedeklarovaná promněne nebo je mazat
+"use strict";
+const fs = require("fs");
+const path = require("path");
 
+//crypto nam pak zabraní generovat duplicitní id
+const crypto = require("crypto");
+ 
+const rf = fs.promises.readFile;
+const wf = fs.promises.writeFile;
 
+const DEFAULT_STORAGE_PATH = path.join(__dirname,"..", "storage", "recipes.json");
+
+class RecipesDao {
+  constructor(storagePath) {
+    //this.recipeStoragePath = storagePath ? storagePath : DEFAULT_STORAGE_PATH;
+    this.recipeStoragePath =  DEFAULT_STORAGE_PATH;
+  }
+
+  async getRecipe(id) {
+    let recipelist = await this._loadAllRecipes();
+    const result = recipelist.find((b) => b.id === id);
+    return result;
+  }
+
+  async _loadAllRecipes() {
+    let recipelist;
+    try {
+      recipelist = JSON.parse(await rf(this._getStorageLocation()));
+    } catch (e) {
+      if (e.code === "ENOENT") {
+        console.info("No storage found, initializing new one...");
+        recipelist = [];
+      } else {
+        throw new Error(
+          "Unable to read from storage. Wrong data format. " +
+            this._getStorageLocation()
+        );
+      }
+    }
+    return recipelist;
+  }
+
+  _getStorageLocation() {
+    return this.recipeStoragePath;
+  }
+}
+
+module.exports = RecipesDao;
 /*
 "use strict";
 const fs = require("fs");
@@ -11,7 +58,8 @@ const rf = fs.promises.readFile;
 const wf = fs.promises.writeFile;
 
 const DEFAULT_STORAGE_PATH = path.join(__dirname, "storage", "students.json");
-
+*/
+/*
 class StudentsDao {
   constructor(storagePath) {
     this.studentStoragePath = storagePath ? storagePath : DEFAULT_STORAGE_PATH;
