@@ -13,15 +13,22 @@ const DEFAULT_STORAGE_PATH = path.join(__dirname,"..", "storage", "recipes.json"
 
 class RecipesDao {
   constructor(storagePath) {
-    //this.recipeStoragePath = storagePath ? storagePath : DEFAULT_STORAGE_PATH;
-    this.recipeStoragePath =  DEFAULT_STORAGE_PATH;
+    this.recipeStoragePath = storagePath ? storagePath : DEFAULT_STORAGE_PATH;
   }
+
+  //TODO async createRecipe(recipe)
 
   async getRecipe(id) {
     let recipelist = await this._loadAllRecipes();
     const result = recipelist.find((b) => b.id === id);
     return result;
   }
+  
+  //TODO async updateRecipe(recipe) 
+
+  //TODO async deleteRecipe(id) 
+
+  //TODO async listRecipes()
 
   async _loadAllRecipes() {
     let recipelist;
@@ -58,8 +65,7 @@ const rf = fs.promises.readFile;
 const wf = fs.promises.writeFile;
 
 const DEFAULT_STORAGE_PATH = path.join(__dirname, "storage", "students.json");
-*/
-/*
+
 class StudentsDao {
   constructor(storagePath) {
     this.studentStoragePath = storagePath ? storagePath : DEFAULT_STORAGE_PATH;

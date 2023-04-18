@@ -3,6 +3,8 @@ const express = require("express");
 const cors = require("cors");
 
 const recipeRouter = require("./controller/recipe-controller");
+//TODO const ingredienceRouter = require("./controller/ingredience-controller");
+//TODO const categoryRouter = require("./controller/category-controller");
 
 //inicializace nového Express.js serveru
 const app = express();
