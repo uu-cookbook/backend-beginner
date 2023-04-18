@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Voda",
+        "id": "sd38sGw4",
+        "unit": "ml",
+        "approved": true
+    },
+    {
+        "name": "Vejce",
+        "id": "Bh786kl4",
+        "unit": "ks",
+        "approved": true
+    },
+    {
+        "name": "Hladká mouka",
+        "id": "am05suG0",
+        "unit": "g",
+        "approved": false
+    }
+]
