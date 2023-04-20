@@ -11,7 +11,8 @@ let schema = {
         name: { type: "string" },
         unit: { type: "string" }
     },
-    required: ["name", "unit"]
+    required: ["name", "unit"],
+    additionalProperties: false
 };
 
 async function CreateAbl(req, res) {

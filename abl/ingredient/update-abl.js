@@ -13,7 +13,8 @@ let schema = {
         unit: { type: "string" },
         approved: { type: "boolean" }
     },
-    required: ["id"]
+    required: ["id"],
+    additionalProperties: false
 };
 
 async function UpdateAbl(req, res) {
