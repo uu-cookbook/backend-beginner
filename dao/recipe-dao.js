@@ -16,7 +16,14 @@ class RecipesDao {
     this.recipeStoragePath = storagePath ? storagePath : DEFAULT_STORAGE_PATH;
   }
 
-  //TODO async createRecipe(recipe)
+  async createRecipe(recipe){
+    let recipelist = await this._loadAllRecipes();
+    recipe.id = crypto.randomBytes(8).toString("hex");
+    recipe.approved = false;
+    recipelist.push(recipe);
+    await wf(this._getStorageLocation(), JSON.stringify(recipelist, null, 2));
+    return recipe;
+  }
 
   async getRecipe(id) {
     let recipelist = await this._loadAllRecipes();

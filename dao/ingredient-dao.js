@@ -17,6 +17,7 @@ class IngredientsDao {
     async createIngredient(ingredient) {
         let ingredientList = await this._loadAllIngredients();
         ingredient.id = crypto.randomBytes(8).toString("hex");
+        ingredient.approved = false;
         ingredientList.push(ingredient);
         await wf(
             this._getStorageLocation(),

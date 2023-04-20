@@ -1,25 +1,67 @@
 [
-    {
-        "name": "Basil Chicken Skewers with Mango Salad",
-        "id": "ug8jHJ7p",
-        "ingredientsId": ["hp4Ft7Jk", "tR6klA2a"],
-        "ingredientionAmound": ["500", "5"], 
-        "portion": "2",
-        "preparationTime": "20 min",
-        "steps": ["Soak your skewers","Slice your chicken"],
-        "categoryId": ["1e2heg","S1eHf","sE1hl2"],
-        "image": "1e2gL"
-    },
-    {
-        "name": "Toust",
-        "id": "dhiU5s4a",
-        "ingredientsId": ["Gbu45Um5"],
-        "ingredientionAmound": ["50", "7", "..."], 
-        "portion": "1",
-        "preparationTime": "5 min",
-        "steps": ["Vem chleba","BlaBlaBla","hotovo"],
-        "categoryId": [],
-        "image": "2w5op"
-    }
-  
+  {
+    "name": "Basil Chicken Skewers with Mango Salad",
+    "id": "ug8jHJ7p",
+    "ingredients": [
+      {
+        "id": "hp4Ft7Jk",
+        "amount": 500
+      },
+      {
+        "id": "tR6klA2a",
+        "amount": 10
+      }
+    ],
+    "portion": 2,
+    "preparationTime": "20 min",
+    "steps": [
+      "Soak your skewers",
+      "Slice your chicken"
+    ],
+    "categoryId": [
+      "1e2heg",
+      "S1eHf",
+      "sE1hl2"
+    ],
+    "image": "1e2gL"
+  },
+  {
+    "name": "Toust",
+    "id": "dhiU5s4a",
+    "ingredients": [
+      {
+        "id": "hp4537Jp",
+        "amount": 2
+      }
+    ],
+    "portion": 1,
+    "preparationTime": "5 min",
+    "steps": [
+      "Vem chleba",
+      "BlaBlaBla",
+      "hotovo"
+    ],
+    "categoryId": [],
+    "image": "2w5op"
+  },
+  {
+    "name": "test recept 1",
+    "ingredients": [
+      {
+        "id": "8f8c29a03bfeb4d1",
+        "amount": 2
+      }
+    ],
+    "portion": 1,
+    "preparationTime": "5 min",
+    "steps": [
+      "Vem chleba",
+      "BlaBlaBla",
+      "hotovo"
+    ],
+    "categoryId": [],
+    "image": "2w5op",
+    "id": "f19fe68dd202f7e9",
+    "approved": false
+  }
 ]
