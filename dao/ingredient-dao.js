@@ -14,12 +14,51 @@ class IngredientsDao {
         this.ingredientStoragePath = storagePath ? storagePath : DEFAULT_STORAGE_PATH;
     }
 
-    // TODO: Create, update, delete, list ingredient
+    async createIngredient(ingredient) {
+        let ingredientList = await this._loadAllIngredients();
+        ingredient.id = crypto.randomBytes(8).toString("hex");
+        ingredientList.push(ingredient);
+        await wf(
+            this._getStorageLocation(),
+            JSON.stringify(ingredientList, null, 2)
+        );
+        return ingredient;
+    }
 
     async getIngredient(id) {
         let ingredientList = await this._loadAllIngredients();
         const result = ingredientList.find((b) => b.id === id);
         return result;
+    }
+
+    async updateIngredient(ingredient) {
+        let ingredientList = await this._loadAllIngredients();
+        const ingredientIndex = ingredientList.findIndex((b) => b.id === ingredient.id);
+        if (ingredientIndex < 0) {
+            throw new Error(`Ingredient with given id ${ingredient.id} does not exist.`);
+        } else {
+            ingredientList[ingredientIndex] = {
+                ...ingredientList[ingredientIndex],
+                ...ingredient
+            };
+        }
+        await wf(this._getStorageLocation(), JSON.stringify(ingredientList, null, 2));
+        return ingredientList[ingredientIndex];
+    }
+
+    async deleteIngredient(id) {
+        let ingredientList = await this._loadAllIngredients();
+        const ingredientIndex = ingredientList.findIndex((b) => b.id === id);
+        if (ingredientIndex >= 0) {
+            ingredientList.splice(ingredientIndex, 1);
+        }
+        await wf(this._getStorageLocation(), JSON.stringify(ingredientList, null, 2));
+        return {};
+    }
+
+    async listIngredients() {
+        let ingredientList = await this._loadAllIngredients();
+        return ingredientList;
     }
 
     async _loadAllIngredients() {
