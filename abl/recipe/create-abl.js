@@ -29,7 +29,7 @@ let schema = {
         categoryId: {type: "array", items: {type: "string"}},
         image: {type: "string"}   
     },
-    required: ["name", "ingredients", "portion", "preparationTime", "steps", "image"],
+    required: ["name", "ingredients", "portion", "categoryId", "preparationTime", "steps", "image"],
     additionalProperties: false
 };
 
