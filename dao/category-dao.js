@@ -13,7 +13,7 @@ class CategoriesDao {
     constructor(storagePath) {
         this.categoryStoragePath = storagePath ? storagePath : DEFAULT_STORAGE_PATH;
     }
-    
+    /*
     async createCategory(category) {
         let categoryList = await this._loadAllCategories();
         category.id = crypto.randomBytes(8).toString("hex");
@@ -24,12 +24,6 @@ class CategoriesDao {
             JSON.stringify(categoryList, null, 2)
         );
         return category;
-    }
-
-    async getCategory(id) {
-        let categoryList = await this._loadAllCategories();
-        const result = categoryList.find((b) => b.id === id);
-        return result;
     }
     
     async updateCategory(category) {
@@ -56,6 +50,12 @@ class CategoriesDao {
         await wf(this._getStorageLocation(), JSON.stringify(categoryList, null, 2));
         return {};
     }
+    */
+    async getCategory(id) {
+        let categoryList = await this._loadAllCategories();
+        const result = categoryList.find((b) => b.id === id);
+        return result;
+    }
 
     async listCategories() {
         let categoryList = await this._loadAllCategories();
@@ -68,7 +68,7 @@ class CategoriesDao {
             categoryList = JSON.parse(await rf(this._getStorageLocation()));
         } catch (e) {
             if (e.code === "ENOENT") {
-                console.info("No category found, initializing new one...");
+                console.info("No category storage found, initializing new one...");
                 categoryList = [];
             } else {
                 throw new Error(

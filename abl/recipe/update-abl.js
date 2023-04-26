@@ -8,14 +8,11 @@ const IngredientDao = require("../../dao/ingredient-dao");
 const { response } = require("express");
 let ingredientDao = new IngredientDao(
     path.join(__dirname, "..", "..", "storage", "ingredients.json")
-);
-// TODO až bude udělana CategoryDao zkonrolovat a odstranit značení komentaře
-/* 
+); 
 const CategoryDao = require("../../dao/category-dao");
 let categoryDao = new CategoryDao(
     path.join(__dirname, "..", "..", "storage", "categorys.json")
 );
-*/
 
 let schema = {
     type: "object",
@@ -55,7 +52,6 @@ async function UpdateAbl(req, res) {
                     return;
                 }
             });
-            /*
             recipe.categoryId.forEach(async (id) => {
                 let validCategory = await categoryDao.getCategory(id)
                 if(!validCategory) {
@@ -67,7 +63,6 @@ async function UpdateAbl(req, res) {
                     return;
                 }
             });
-            */
             recipe = await dao.updateRecipe(recipe);
             res.json(recipe);
         } else {
