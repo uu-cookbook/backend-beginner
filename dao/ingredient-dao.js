@@ -68,7 +68,7 @@ class IngredientsDao {
             ingredientList = JSON.parse(await rf(this._getStorageLocation()));
         } catch (e) {
             if (e.code === "ENOENT") {
-                console.info("No ingredient storage found, initializing new one...");
+                console.info("No ingredient found, initializing new one...");
                 ingredientList = [];
             } else {
                 throw new Error(
