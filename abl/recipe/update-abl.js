@@ -2,7 +2,7 @@ const path = require("path");
 const Ajv = require("ajv").default;
 const RecipeDao = require("../../dao/recipe-dao");
 let dao = new RecipeDao(
-    path.join(__dirname, "..", "..", "storage", "recipes.json")
+  path.join(__dirname, "..", "..", "storage", "recipes.json")
 );
 const IngredientDao = require("../../dao/ingredient-dao");
 const { response } = require("express");
@@ -20,23 +20,25 @@ let categoryDao = new CategoryDao(
 let schema = {
     type: "object",
     properties: {
+        id: { type: "string" },
         name: {type: "string"},
         ingredients: {type: "array", 
             items: {type: "object", 
                 properties: {id: {type: "string"},amount: {type: "number"}},
                 required: ["id","amount"], additionalProperties: false
-            }, minItems: 1},
+            }},
         portion: {type: "number"},
         preparationTime: {type: "number"},
         steps: {type: "array", items: {type: "string"}, minItems: 1},
         categoryId: {type: "array", items: {type: "string"}},
-        image: {type: "string"}   
+        image: {type: "string"},   
+        approved: { type: "boolean" }
     },
-    required: ["name", "ingredients", "portion", "preparationTime", "steps", "image"],
+    required: ["id", "ingredients"],
     additionalProperties: false
 };
 
-async function CreateAbl(req, res) {
+async function UpdateAbl(req, res) {
     try {
         const ajv = new Ajv();
         const valid = ajv.validate(schema, req.body);
@@ -66,18 +68,18 @@ async function CreateAbl(req, res) {
                 }
             });
             */
-            recipe = await dao.createRecipe(recipe);
+            recipe = await dao.updateRecipe(recipe);
             res.json(recipe);
         } else {
             res.status(400).send({
                 errorMessage: "validation of recipe input failed",
                 params: req.body,
-                reason: ajv.errors,
+                reason: ajv.errors
             });
         }
     } catch (e) {
+        console.log(e);
         res.status(500).send(e);
     }
 }
-
-module.exports = CreateAbl;
+module.exports = UpdateAbl;

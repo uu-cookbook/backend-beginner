@@ -1,8 +1,8 @@
 const path = require("path");
 const Ajv = require("ajv").default;
-const IngredientsDao = require("../../dao/ingredient-dao");
-let dao = new IngredientsDao(
-    path.join(__dirname, "..", "..", "storage", "ingredients.json")
+const RecipesDao = require("../../dao/recipe-dao");
+let dao = new RecipesDao(
+    path.join(__dirname, "..", "..", "storage", "recipes.json")
 );
 
 let schema = {
@@ -19,12 +19,12 @@ async function DeleteAbl(req, res) {
         const body = req.query.id ? req.query : req.body;
         const valid = ajv.validate(schema, body);
         if (valid) {
-            const ingredientId = body.id;
-            await dao.deleteIngredient(ingredientId);
+            const recipeId = body.id;
+            await dao.deleteRecipe(recipeId);
             res.json({});
         } else {
             res.status(400).send({
-                errorMessage: "validation of ingredient input failed",
+                errorMessage: "validation of recipe input failed",
                 params: body,
                 reason: ajv.errors
             });
@@ -34,5 +34,4 @@ async function DeleteAbl(req, res) {
         res.status(500).send(e);
     }
 }
-
 module.exports = DeleteAbl;

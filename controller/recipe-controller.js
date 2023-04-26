@@ -3,10 +3,9 @@ const router = express.Router();
 
 const GetAbl = require("../abl/recipe/get-abl");
 const CreateAbl = require("../abl/recipe/create-abl");
-//TODO const LoadAbl = require("../abl/recipe/load-abl");
-//TODO const UpdateAbl = require("../abl/recipe/update-abl");
-//TODO const DeleteAbl = require("../abl/recipe/delete-abl");
-//TODO const ListAbl = require("../abl/recipe/list-abl");
+const UpdateAbl = require("../abl/recipe/update-abl");
+const DeleteAbl = require("../abl/recipe/delete-abl");
+const ListAbl = require("../abl/recipe/list-abl");
 
 router.get("/get", async (req, res) => {
     await GetAbl(req, res);
@@ -14,30 +13,6 @@ router.get("/get", async (req, res) => {
 
 router.post("/create", async (req, res) => {
   await CreateAbl(req, res);
-});
-
-module.exports = router;
-/*
-const express = require("express");
-const router = express.Router();
-
-const CreateAbl = require("../abl/classroom/create-abl");
-const GetAbl = require("../abl/classroom/get-abl");
-const LoadAbl = require("../abl/classroom/load-abl");
-const UpdateAbl = require("../abl/classroom/update-abl");
-const DeleteAbl = require("../abl/classroom/delete-abl");
-const ListAbl = require("../abl/classroom/list-abl");
- 
-router.post("/create", async (req, res) => {
-  await CreateAbl(req, res);
-});
-
-router.get("/get", async (req, res) => {
-  await GetAbl(req, res);
-});
-
-router.get("/load", async (req, res) => {
-  await LoadAbl(req, res);
 });
 
 router.post("/update", async (req, res) => {
@@ -53,5 +28,3 @@ router.get("/list", async (req, res) => {
 });
 
 module.exports = router;
-
-*/
