@@ -11,7 +11,7 @@ let ingredientDao = new IngredientDao(
 ); 
 const CategoryDao = require("../../dao/category-dao");
 let categoryDao = new CategoryDao(
-    path.join(__dirname, "..", "..", "storage", "categorys.json")
+    path.join(__dirname, "..", "..", "storage", "categories.json")
 );
 
 let schema = {
@@ -31,7 +31,7 @@ let schema = {
         image: {type: "string"},   
         approved: { type: "boolean" }
     },
-    required: ["id", "ingredients"],
+    required: ["id"],
     additionalProperties: false
 };
 
@@ -41,28 +41,32 @@ async function UpdateAbl(req, res) {
         const valid = ajv.validate(schema, req.body);
         if (valid) {
             let recipe = req.body;
-            recipe.ingredients.forEach(async (ingredient) => {
-                let validIngredient = await ingredientDao.getIngredient(ingredient.id)
-                if(!validIngredient) {
-                    res.status(400).send({
-                        errorMessage: `ingredient with given id ${ingredient.id} does not exist`,
-                        params: req.body,
-                        reason: ajv.errors,
-                    });
-                    return;
-                }
-            });
-            recipe.categoryId.forEach(async (id) => {
-                let validCategory = await categoryDao.getCategory(id)
-                if(!validCategory) {
-                    res.status(400).send({
-                        errorMessage: `category with given id ${id} does not exist`,
-                        params: req.body,
-                        reason: ajv.errors,
-                    });
-                    return;
-                }
-            });
+            if(recipe.ingredients) {
+                recipe.ingredients.forEach(async (ingredient) => {
+                    let validIngredient = await ingredientDao.getIngredient(ingredient.id)
+                    if(!validIngredient) {
+                        res.status(400).send({
+                            errorMessage: `ingredient with given id ${ingredient.id} does not exist`,
+                            params: req.body,
+                            reason: ajv.errors,
+                        });
+                        return;
+                    }
+                });
+            }
+            if(recipe.categoryId) {
+                recipe.categoryId.forEach(async (id) => {
+                    let validCategory = await categoryDao.getCategory(id)
+                    if(!validCategory) {
+                        res.status(400).send({
+                            errorMessage: `category with given id ${id} does not exist`,
+                            params: req.body,
+                            reason: ajv.errors,
+                        });
+                        return;
+                    }
+                });
+            }
             recipe = await dao.updateRecipe(recipe);
             res.json(recipe);
         } else {

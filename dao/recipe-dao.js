@@ -28,6 +28,16 @@ class RecipesDao {
   async getRecipe(id) {
     let recipelist = await this._loadAllRecipes();
     const result = recipelist.find((b) => b.id === id);
+    /*
+    if(!result) {
+      res.status(400).send({
+        errorMessage: `category with given id ${id} does not exist`,
+        params: req.body,
+        reason: ajv.errors,
+    });
+    return;
+    }
+    */
     return result;
   }
   

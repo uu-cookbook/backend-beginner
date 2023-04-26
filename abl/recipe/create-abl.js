@@ -29,7 +29,7 @@ let schema = {
         categoryId: {type: "array", items: {type: "string"}},
         image: {type: "string"}   
     },
-    required: ["name", "ingredients", "portion", "categoryId", "preparationTime", "steps", "image"],
+    required: ["name", "ingredients", "portion", "preparationTime", "steps", "image"],
     additionalProperties: false
 };
 
@@ -50,17 +50,19 @@ async function CreateAbl(req, res) {
                     return;
                 }
             });
-            recipe.categoryId.forEach(async (id) => {
-                let validCategory = await categoryDao.getCategory(id)
-                if(!validCategory) {
-                    res.status(400).send({
-                        errorMessage: `category with given id ${id} does not exist`,
-                        params: req.body,
-                        reason: ajv.errors,
-                    });
-                    return;
-                }
-            });
+            if(recipe.categoryId) {
+                recipe.categoryId.forEach(async (id) => {
+                    let validCategory = await categoryDao.getCategory(id)
+                    if(!validCategory) {
+                        res.status(400).send({
+                            errorMessage: `category with given id ${id} does not exist`,
+                            params: req.body,
+                            reason: ajv.errors,
+                        });
+                        return;
+                    }
+                });
+            }
             recipe = await dao.createRecipe(recipe);
             res.json(recipe);
         } else {
@@ -71,6 +73,7 @@ async function CreateAbl(req, res) {
             });
         }
     } catch (e) {
+        console.log(e)
         res.status(500).send(e);
     }
 }
