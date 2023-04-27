@@ -1,12 +1,37 @@
 [
     {
-      "name": "Polévky",
+      "name": "Soup",
       "id": "56rKd785abJudv75",
       "color": "FF00F0"
     },
     {
-        "name": "Hlavní chod",
-        "id": "64gdfsbZGhb85",
+        "name": "Main course",
+        "id": "64gdfsbZGhb85iKa",
         "color": "FFFB00"
+    },
+    {
+      "name": "Desert",
+      "id": "Ke58hDji7NpAn8tR",
+      "color": "FFFB00"
+    },
+    {
+      "name": "Salad",
+      "id": "k7sFgfH7H8ka98a7",
+      "color": "FFFB00"
+    },
+    {
+      "name": "Vegan",
+      "id": "5875555",
+      "color": "FFFB00"
+    },
+    {
+      "name": "Vegetarian",
+      "id": "78337555",
+      "color": "FFFB00"
+    },
+    {
+      "name": "Grill",
+      "id": "722243834",
+      "color": "FFFB00"
     }
 ]

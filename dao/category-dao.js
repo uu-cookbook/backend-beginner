@@ -2,10 +2,10 @@
 const fs = require("fs");
 const path = require("path");
 
-const crypto = require("crypto");
+//const crypto = require("crypto");
 
 const rf = fs.promises.readFile;
-const wf = fs.promises.writeFile;
+//const wf = fs.promises.writeFile;
 
 const DEFAULT_STORAGE_PATH = path.join(__dirname,"..", "storage", "categories.json");
 
