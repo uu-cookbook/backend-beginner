@@ -2,36 +2,51 @@
     {
       "name": "Soup",
       "id": "56rKd785abJudv75",
-      "color": "FF00F0"
+      "color": "#FF00F0"
     },
     {
         "name": "Main course",
         "id": "64gdfsbZGhb85iKa",
-        "color": "FFFB00"
+        "color": "#FFFB00"
     },
     {
       "name": "Desert",
       "id": "Ke58hDji7NpAn8tR",
-      "color": "FFFB00"
+      "color": "#00F7FF"
     },
     {
       "name": "Salad",
       "id": "k7sFgfH7H8ka98a7",
-      "color": "FFFB00"
+      "color": "#00FF0F"
     },
     {
       "name": "Vegan",
-      "id": "5875555",
-      "color": "FFFB00"
+      "id": "1Ohk8dhAP8h73jK4",
+      "color": "#8B00FF"
     },
     {
       "name": "Vegetarian",
-      "id": "78337555",
-      "color": "FFFB00"
+      "id": "T8nFk03YrTI7l384r",
+      "color": "#0023FF"
     },
     {
       "name": "Grill",
-      "id": "722243834",
-      "color": "FFFB00"
+      "id": "68LorN7dG348tR4",
+      "color": "#FF0000"
+    },
+    {
+      "name": "Drink",
+      "id": "RDYumqZSvg24C286",
+      "color": "#DFFF00"
+    },
+    {
+      "name": "Fish",
+      "id": "sU5jw9PKM6NbvDeX",
+      "color": "#6495ED"
+    },
+    {
+      "name": "Meat",
+      "id": "f81sml6eD7EdtTtV",
+      "color": "#40E0D0"
     }
 ]
