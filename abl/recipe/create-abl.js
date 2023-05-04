@@ -26,10 +26,9 @@ let schema = {
         portion: {type: "number"},
         preparationTime: {type: "number"},
         steps: {type: "array", items: {type: "string"}, minItems: 1},
-        categoryId: {type: "array", items: {type: "string"}},
-        image: {type: "string"}   
+        categoryId: {type: "array", items: {type: "string"}}
     },
-    required: ["name", "ingredients", "portion", "preparationTime", "steps", "image"],
+    required: ["name", "ingredients", "portion", "preparationTime", "steps"],
     additionalProperties: false
 };
 
@@ -79,3 +78,4 @@ async function CreateAbl(req, res) {
 }
 
 module.exports = CreateAbl;
+
