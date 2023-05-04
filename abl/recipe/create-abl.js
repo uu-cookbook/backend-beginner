@@ -11,7 +11,7 @@ let ingredientDao = new IngredientDao(
 );
 const CategoryDao = require("../../dao/category-dao");
 let categoryDao = new CategoryDao(
-    path.join(__dirname, "..", "..", "storage", "categorys.json")
+    path.join(__dirname, "..", "..", "storage", "categories.json")
 );
 
 let schema = {

@@ -52,7 +52,6 @@ class CategoriesDao {
     }
     */
     async getCategory(id) {
-        console.log("until now ok")
         let categoryList = await this._loadAllCategories();
         const result = categoryList.find((b) => b.id === id);
         return result;
