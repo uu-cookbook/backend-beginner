@@ -5,6 +5,7 @@ const cors = require("cors");
 const recipeRouter = require("./controller/recipe-controller");
 const ingredientRouter = require("./controller/ingredient-controller");
 const categoryRouter = require("./controller/category-controller");
+const imageRouter = require("./controller/image-controller");
 
 //inicializace nového Express.js serveru
 const app = express();
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 app.use("/recipe", recipeRouter);
 app.use("/ingredient", ingredientRouter);
 app.use("/category", categoryRouter);
+app.use("/image", imageRouter);
 
 app.get("/*", (req, res) => {
   res.send("Unknown path!");

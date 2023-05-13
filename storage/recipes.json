@@ -14,11 +14,33 @@
       "BlaBlaBla",
       "hotovo"
     ],
-    "image": null,
+    "image": "file_16112944fde39e80.png",
     "id": "750b80c26be44138",
     "approved": true,
     "categoryId": [
       "56rKd785abJudv75"
     ]
+  },
+  {
+    "name": "test recept 2",
+    "ingredients": [
+      {
+        "id": "c2214107be5861cd",
+        "amount": 8
+      }
+    ],
+    "portion": 1,
+    "preparationTime": 7,
+    "steps": [
+      "a",
+      "bbb",
+      "ccccc"
+    ],
+    "categoryId": [
+      "Ke58hDji7NpAn8tR"
+    ],
+    "id": "77815667779e03f6",
+    "approved": false,
+    "image": "a5cbc0a7ea0bd45d6412712179f063b2.jpg"
   }
 ]
