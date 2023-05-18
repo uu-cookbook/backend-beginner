@@ -25,7 +25,7 @@ const upload = multer({
 
 const CreateAbl = require("../abl/image/create-abl");
 const GetAbl = require("../abl/image/get-abl");
-//const UpdateAbl = require("../abl/image/update-abl");
+const UpdateAbl = require("../abl/image/update-abl");
 const DeleteAbl = require("../abl/image/delete-abl");
 //const ListAbl = require("../abl/image/list-abl");
 
@@ -37,11 +37,10 @@ router.post("/create", upload, async (req, res) => {
 router.get("/get", async (req, res) => {
     await GetAbl(req, res);
 });
-/*
-router.post("/update", async (req, res) => {
+
+router.post("/update", upload, async (req, res) => {
   await UpdateAbl(req, res);
 });
-*/
 
 router.post("/delete", async (req, res) => {
   await DeleteAbl(req, res);
