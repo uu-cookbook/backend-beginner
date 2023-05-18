@@ -19,6 +19,7 @@ let schema = {
     properties: {
         id: { type: "string" },
         name: {type: "string"},
+        description: {type: "string"},
         ingredients: {type: "array", 
             items: {type: "object", 
                 properties: {id: {type: "string"},amount: {type: "number"}},
@@ -28,7 +29,8 @@ let schema = {
         preparationTime: {type: "number"},
         steps: {type: "array", items: {type: "string"}, minItems: 1},
         categoryId: {type: "array", items: {type: "string"}},
-        image: {type: "string"},   
+        image: {type: "string"},  
+        date: {type: "string"},
         approved: { type: "boolean" }
     },
     required: ["id"],

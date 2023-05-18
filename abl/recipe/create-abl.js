@@ -18,6 +18,7 @@ let schema = {
     type: "object",
     properties: {
         name: {type: "string"},
+        description: {type: "string"},
         ingredients: {type: "array", 
             items: {type: "object", 
                 properties: {id: {type: "string"},amount: {type: "number"}},
@@ -28,7 +29,7 @@ let schema = {
         steps: {type: "array", items: {type: "string"}, minItems: 1},
         categoryId: {type: "array", items: {type: "string"}}
     },
-    required: ["name", "ingredients", "portion", "preparationTime", "steps"],
+    required: ["name", "description", "ingredients", "portion", "preparationTime", "steps"],
     additionalProperties: false
 };
 
