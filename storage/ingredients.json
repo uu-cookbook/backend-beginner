@@ -28,5 +28,29 @@
     "unit": "ks",
     "approved": false,
     "id": "8f8c29a03bfeb4d1"
+  },
+  {
+    "name": "Maslo",
+    "unit": "g",
+    "approved": false,
+    "id": "0bedfc36539b3de4"
+  },
+  {
+    "name": "Mushrooms",
+    "unit": "cup",
+    "approved": true,
+    "id": "69ae472952fc0680"
+  },
+  {
+    "name": "Bread",
+    "unit": "slices",
+    "approved": true,
+    "id": "3b2c26aa6c6bbfcb"
+  },
+  {
+    "name": "Vegetable Oil",
+    "unit": "tbsp",
+    "approved": true,
+    "id": "58ab7aa980710dba"
   }
 ]

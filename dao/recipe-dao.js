@@ -20,7 +20,7 @@ class RecipesDao {
     let recipelist = await this._loadAllRecipes();
     recipe.id = crypto.randomBytes(8).toString("hex");
     recipe.approved = false;
-    recipe.date = new Date.now().toISOString();
+    recipe.date = new Date().toISOString();
     recipe.image = null;
     recipelist.push(recipe);
     await wf(this._getStorageLocation(), JSON.stringify(recipelist, null, 2));

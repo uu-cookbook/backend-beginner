@@ -1,46 +1,85 @@
 [
   {
-    "name": "test recept 1",
+    "name": "Vegetable Stir-Fry",
+    "description": "A quick and healthy dish made with a variety of vegetables and stir-fry sauce.",
     "ingredients": [
       {
-        "id": "8f8c29a03bfeb4d1",
-        "amount": 2
+        "id": "69ae472952fc0680",
+        "amount": 1
       }
     ],
     "portion": 1,
-    "preparationTime": 5,
+    "preparationTime": 25,
     "steps": [
-      "Vem chleba",
-      "BlaBlaBla",
-      "hotovo"
+      "Heat vegetable oil in a large skillet or wok over medium-high heat.",
+      "Add garlic and onion, and sauté for 2 minutes until fragrant.",
+      "Add bell pepper, carrots, broccoli, snap peas, and mushrooms. Stir-fry for 5-6 minutes until vegetables are crisp-tender.",
+      "In a small bowl, whisk together soy sauce, oyster sauce, sesame oil, red pepper flakes, salt, and pepper.",
+      "Pour the sauce over the vegetables and stir well to coat evenly. Cook for an additional 2-3 minutes.",
+      "Serve hot and enjoy!"
     ],
-    "image": "file_0c03ec9d38caa57e.png",
-    "id": "750b80c26be44138",
+    "id": "46191890151309e4",
     "approved": true,
+    "date": "2023-05-19T10:31:21.624Z",
+    "image": "file_28eefc6707a079df.jpg",
     "categoryId": [
-      "56rKd785abJudv75"
+      "T8nFk03YrTI7l384r"
     ]
   },
   {
-    "name": "test recept 2",
+    "name": "Grilled Cheese Sandwich",
+    "description": "A classic sandwich with melted cheese between crispy toasted bread slices.",
     "ingredients": [
       {
-        "id": "c2214107be5861cd",
-        "amount": 8
+        "id": "3b2c26aa6c6bbfcb",
+        "amount": 4
       }
     ],
-    "portion": 1,
-    "preparationTime": 7,
+    "portion": 2,
+    "preparationTime": 10,
     "steps": [
-      "a",
-      "bbb",
-      "ccccc"
+      "Preheat a skillet or griddle over medium heat.",
+      "Spread butter on one side of each bread slice.",
+      "Place a slice of cheese between two slices of bread, with the buttered sides facing outwards.",
+      "Place the sandwich in the preheated skillet and cook for 2-3 minutes until the bread is golden brown.",
+      "Flip the sandwich and cook for an additional 2-3 minutes until the cheese is melted and the other side is golden brown.",
+      "Remove from heat, slice if desired, and serve hot."
     ],
+    "id": "4d04bcc3b7a7f3f0",
+    "approved": true,
+    "date": "2023-05-19T10:38:29.116Z",
+    "image": "file_f199d377cfc2bff1.jpg",
     "categoryId": [
-      "Ke58hDji7NpAn8tR"
+      "64gdfsbZGhb85iKa"
+    ]
+  },
+  {
+    "name": "Beef Stew",
+    "description": "A hearty stew with tender beef, vegetables, and rich flavors.",
+    "ingredients": [
+      {
+        "id": "58ab7aa980710dba",
+        "amount": 2
+      }
     ],
-    "id": "77815667779e03f6",
+    "portion": 6,
+    "preparationTime": 30,
+    "steps": [
+      "Heat vegetable oil in a large pot or Dutch oven over medium-high heat.",
+      "Add beef stew meat and brown on all sides. Remove the meat and set it aside.",
+      "In the same pot, add onion and garlic. Sauté until onions are translucent.",
+      "Add carrots, potatoes, and celery. Cook for 5 minutes, stirring occasionally.",
+      "Return the beef to the pot. Add beef broth, red wine (if using), bay leaf, thyme, paprika, salt, and pepper.",
+      "Bring the stew to a boil, then reduce heat to low. Cover and simmer for 2-3 hours until the beef is tender.",
+      "Remove the bay leaf before serving. Serve hot and enjoy!"
+    ],
+    "id": "11a0c0a857de2f23",
     "approved": false,
-    "image": "a5cbc0a7ea0bd45d6412712179f063b2.jpg"
+    "date": "2023-05-19T10:39:41.912Z",
+    "image": null,
+    "categoryId": [
+      "64gdfsbZGhb85iKa",
+      "f81sml6eD7EdtTtV"
+    ]
   }
 ]
