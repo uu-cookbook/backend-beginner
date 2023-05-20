@@ -13,7 +13,8 @@ async function CreateAbl(req, res) {
                 let recipe = await dao.getRecipe(id);
                 if (recipe){
                     if (recipe.image) {
-                        fileName = path.join(__dirname, "..", "..", "storage", "image", recipe.image )
+                        //TODO alternative// fileName = path.join(__dirname, "..", "..", "storage", "image", recipe.image )
+                        fileName = path.join(__dirname, "..", "..", "public", "recipe_images", recipe.image )
                         if (fs.existsSync(path)) {
                             fs.promises.unlink(fileName)
                         }
@@ -22,7 +23,8 @@ async function CreateAbl(req, res) {
                     recipe = await dao.updateRecipe(recipe);
                     res.json(recipe);
                 } else {
-                    fileName = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
+                    //TODO alternative// fileName = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
+                    fileName = path.join(__dirname, "..", "..", "public", "recipe_images", req.file.filename)
                     if (fs.existsSync(path)) {
                         fs.promises.unlink(fileName)
                     }
@@ -32,7 +34,8 @@ async function CreateAbl(req, res) {
                     });
                 }
             } else {
-                fileName = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
+                //TODO alternative// fileName = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
+                fileName = path.join(__dirname, "..", "..", "public", "recipe_images", req.file.filename)
                 fs.promises.unlink(fileName)
                 res.status(400).send({
                     errorMessage: "recipe id input failed",

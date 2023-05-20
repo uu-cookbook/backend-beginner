@@ -16,7 +16,8 @@ async function CreateAbl(req, res) {
                     recipe = await dao.updateRecipe(recipe);
                     res.json(recipe);
                 } else {
-                    file = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
+                    //TODO alternative// file = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
+                    file = path.join(__dirname, "..", "..", "public", "recipe_images", req.file.filename)
                     if (fs.existsSync(path)) {
                         fs.promises.unlink(file)
                     }
@@ -26,7 +27,8 @@ async function CreateAbl(req, res) {
                     });
                 }
             } else {
-                file = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
+                //TODO alternative// file = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
+                file = path.join(__dirname, "..", "..", "public", "recipe_images", req.file.filename)
                 if (fs.existsSync(path)) {
                     fs.promises.unlink(file)
                 }

@@ -6,7 +6,8 @@ const multer  = require('multer')
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'storage/image/')
+//TODO alternative//  cb(null, 'storage/image/')
+      cb(null, 'public/recipe_images/')
     },
     filename: function (req, file, cb) {
       cb(null, file.fieldname + '_' + crypto.randomBytes(8).toString("hex") + path.extname(file.originalname))

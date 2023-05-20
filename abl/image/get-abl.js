@@ -18,7 +18,8 @@ async function GetAbl(req, res) {
         const valid = ajv.validate(schema, body);
         if (valid) {
             let image = body.image;
-            file = path.join(__dirname, "..", "..", "storage", "image", image)
+            //TODO alternative//  file = path.join(__dirname, "..", "..", "storage", "image", image)
+            file = path.join(__dirname, "..", "..", "public", "recipe_images", image)
             fs.access(file, fs.F_OK, (err) => {
                 if (err) {
                     res.status(400).send({
