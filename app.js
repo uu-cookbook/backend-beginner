@@ -27,6 +27,7 @@ app.use("/recipe", recipeRouter);
 app.use("/ingredient", ingredientRouter);
 app.use("/category", categoryRouter);
 app.use("/image", imageRouter);
+app.use(express.static('public'))
 
 app.get("/*", (req, res) => {
   res.send("Unknown path!");
