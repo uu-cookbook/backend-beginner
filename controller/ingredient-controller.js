@@ -6,6 +6,7 @@ const GetAbl = require("../abl/ingredient/get-abl");
 const UpdateAbl = require("../abl/ingredient/update-abl");
 const DeleteAbl = require("../abl/ingredient/delete-abl");
 const ListAbl = require("../abl/ingredient/list-abl");
+const UpdateListAbl = require("../abl/ingredient/update-list-abl");
 
 router.post("/create", async (req, res) => {
     await CreateAbl(req, res);
@@ -17,6 +18,10 @@ router.get("/get", async (req, res) => {
 
 router.post("/update", async (req, res) => {
     await UpdateAbl(req, res);
+});
+
+router.post("/update-list", async (req, res) => {
+    await UpdateListAbl(req, res);
 });
 
 router.post("/delete", async (req, res) => {

@@ -47,6 +47,23 @@ class IngredientsDao {
         return ingredientList[ingredientIndex];
     }
 
+    async updateIngredientList(ingredients) {
+        let ingredientList = await this._loadAllIngredients();
+        ingredients.forEach((ingredient) => {
+            const ingredientIndex = ingredientList.findIndex((b) => b.id === ingredient.id);
+            if (ingredientIndex < 0) {
+                throw new Error(`Ingredient with given id ${ingredient.id} does not exist.`);
+            } else {
+                ingredientList[ingredientIndex] = {
+                    ...ingredientList[ingredientIndex],
+                    ...ingredient
+                };
+            }
+        });
+        await wf(this._getStorageLocation(), JSON.stringify(ingredientList, null, 2));
+        return ingredientList;
+    }
+
     async deleteIngredient(id) {
         let ingredientList = await this._loadAllIngredients();
         const ingredientIndex = ingredientList.findIndex((b) => b.id === id);
