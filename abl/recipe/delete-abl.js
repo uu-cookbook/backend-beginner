@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 const Ajv = require("ajv").default;
 const RecipesDao = require("../../dao/recipe-dao");
 let dao = new RecipesDao(
@@ -20,6 +21,12 @@ async function DeleteAbl(req, res) {
         const valid = ajv.validate(schema, body);
         if (valid) {
             const recipeId = body.id;
+            const recipe = await dao.getRecipe(recipeId);
+            //TODO alternative//  file = path.join(__dirname, "..", "..", "storage", "image", fileName)
+            file = path.join(__dirname, "..", "..", "public", "recipe_images", recipe.image)
+            if (fs.existsSync(path)) {
+                fs.promises.unlink(file)
+            }
             await dao.deleteRecipe(recipeId);
             res.json({});
         } else {

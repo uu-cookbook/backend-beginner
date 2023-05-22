@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const multer  = require('multer')
-const upload = multer({ dest: 'storage/image/' })
+//const multer  = require('multer')
+//const upload = multer({ dest: 'storage/image/' })
 
 const GetAbl = require("../abl/recipe/get-abl");
 const CreateAbl = require("../abl/recipe/create-abl");

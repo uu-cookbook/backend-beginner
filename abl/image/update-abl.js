@@ -15,7 +15,7 @@ async function CreateAbl(req, res) {
                     if (recipe.image) {
                         //TODO alternative// fileName = path.join(__dirname, "..", "..", "storage", "image", recipe.image )
                         fileName = path.join(__dirname, "..", "..", "public", "recipe_images", recipe.image )
-                        if (fs.existsSync(path)) {
+                        if (fs.existsSync(fileName)) {
                             fs.promises.unlink(fileName)
                         }
                     }
@@ -25,7 +25,7 @@ async function CreateAbl(req, res) {
                 } else {
                     //TODO alternative// fileName = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
                     fileName = path.join(__dirname, "..", "..", "public", "recipe_images", req.file.filename)
-                    if (fs.existsSync(path)) {
+                    if (fs.existsSync(fileName)) {
                         fs.promises.unlink(fileName)
                     }
                     res.status(400).send({
@@ -36,7 +36,9 @@ async function CreateAbl(req, res) {
             } else {
                 //TODO alternative// fileName = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
                 fileName = path.join(__dirname, "..", "..", "public", "recipe_images", req.file.filename)
-                fs.promises.unlink(fileName)
+                if (fs.existsSync(fileName)) {
+                    fs.promises.unlink(fileName)
+                }
                 res.status(400).send({
                     errorMessage: "recipe id input failed",
                     params: req.body

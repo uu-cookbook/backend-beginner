@@ -9,7 +9,7 @@ async function DeleteAbl(req, res) {
         if (fileName) {
             //TODO alternative//  file = path.join(__dirname, "..", "..", "storage", "image", fileName)
             file = path.join(__dirname, "..", "..", "public", "recipe_images", fileName)
-            if (fs.existsSync(path)) {
+            if (fs.existsSync(file)) {
                 fs.promises.unlink(file)
             } 
             res.json({}); 

@@ -18,7 +18,7 @@ async function CreateAbl(req, res) {
                 } else {
                     //TODO alternative// file = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
                     file = path.join(__dirname, "..", "..", "public", "recipe_images", req.file.filename)
-                    if (fs.existsSync(path)) {
+                    if (fs.existsSync(file)) {
                         fs.promises.unlink(file)
                     }
                     res.status(400).send({
@@ -29,7 +29,7 @@ async function CreateAbl(req, res) {
             } else {
                 //TODO alternative// file = path.join(__dirname, "..", "..", "storage", "image", req.file.filename)
                 file = path.join(__dirname, "..", "..", "public", "recipe_images", req.file.filename)
-                if (fs.existsSync(path)) {
+                if (fs.existsSync(file)) {
                     fs.promises.unlink(file)
                 }
                 res.status(400).send({
