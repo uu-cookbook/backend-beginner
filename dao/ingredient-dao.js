@@ -49,6 +49,7 @@ class IngredientsDao {
 
     async updateIngredientList(ingredients) {
         let ingredientList = await this._loadAllIngredients();
+        let changedIngredients = [];
         ingredients.forEach((ingredient) => {
             const ingredientIndex = ingredientList.findIndex((b) => b.id === ingredient.id);
             if (ingredientIndex < 0) {
@@ -58,10 +59,11 @@ class IngredientsDao {
                     ...ingredientList[ingredientIndex],
                     ...ingredient
                 };
+                changedIngredients.push(ingredientList[ingredientIndex]);
             }
         });
         await wf(this._getStorageLocation(), JSON.stringify(ingredientList, null, 2));
-        return ingredientList;
+        return changedIngredients;
     }
 
     async deleteIngredient(id) {
