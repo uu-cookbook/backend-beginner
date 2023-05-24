@@ -25,7 +25,9 @@
       "Place a steaming rack or basket in a large pot with a lid (make sure your bowl will fit in the pot when covered with lid). Pour in water to come 2\" up sides of pot and bring to a simmer over medium heat. If using a Tatung steamer instead, add 1 cup water to steamer.",
       "Carefully place bowl with egg mixture into steamer and cover immediately, leaving lid slightly askew for steam to escape. Reduce heat to medium-low and steam, adjusting heat as needed to keep water at a gentle boil, until egg mixture is set and jiggly when shaken, 12–15 minutes. If using a Tatung steamer, place bowl with egg mixture in steamer and cover with lid, propping open with a folded paper towel. Press cook switch and wait until switch bounces back, about 15 minutes."
     ],
-    "categoryId": [],
+    "categoryId": [
+      "56rKd785abJudv75"
+    ],
     "id": "c980af7acd19f135",
     "approved": true,
     "date": "2023-05-24T07:49:58.863Z",
@@ -66,6 +68,10 @@
       {
         "id": "ce54fa8975d5e933",
         "amount": 1
+      },
+      {
+        "id": "964e5a3445075dba",
+        "amount": 2
       }
     ],
     "portion": 4,
@@ -155,7 +161,9 @@
       "Cook on a medium heat until the curry is nice and thick.",
       "Serve the curry on top of your steaming rice. Garnish with freshly chopped coriander."
     ],
-    "categoryId": [],
+    "categoryId": [
+      "1Ohk8dhAP8h73jK4"
+    ],
     "id": "2b0e439b28942764",
     "approved": true,
     "date": "2023-05-24T10:26:44.893Z",
@@ -218,5 +226,104 @@
     "approved": true,
     "date": "2023-05-24T10:39:07.645Z",
     "image": "file_e4f75bd1692803ec.png"
+  },
+  {
+    "name": "Baked Salmon",
+    "description": "Delicious and healthy baked salmon with a flavorful glaze.",
+    "ingredients": [
+      {
+        "id": "dbb3e9c50c2ac134",
+        "amount": 1
+      },
+      {
+        "id": "964e5a3445075dba",
+        "amount": 2
+      },
+      {
+        "id": "40a704cfe5eb2f66",
+        "amount": 2
+      },
+      {
+        "id": "c0e47c3431f07aae",
+        "amount": 2
+      }
+    ],
+    "portion": 2,
+    "preparationTime": 25,
+    "steps": [
+      "Preheat the oven to 375°F (190°C) and line a baking sheet with parchment paper.",
+      "Place the salmon fillet on the baking sheet and drizzle with olive oil.",
+      "Season with salt and pepper, then top with lemon slices.",
+      "In a small bowl, whisk together honey, Dijon mustard, and minced garlic.",
+      "Brush the glaze over the salmon, coating it evenly.",
+      "Bake for 15-20 minutes until the salmon is cooked through and flakes easily with a fork.",
+      "Garnish with fresh dill and serve hot."
+    ],
+    "categoryId": [
+      "sU5jw9PKM6NbvDeX"
+    ],
+    "id": "4c1d3901f0447196",
+    "approved": true,
+    "date": "2023-05-24T10:44:52.480Z",
+    "image": "file_2cbf7228a20ffc6f.jpg"
+  },
+  {
+    "name": "Chicken Curry",
+    "description": "A flavorful and aromatic chicken curry with spices and coconut milk.",
+    "ingredients": [
+      {
+        "id": "58ab7aa980710dba",
+        "amount": 2
+      },
+      {
+        "id": "f5f709c0bf773f39",
+        "amount": 1
+      },
+      {
+        "id": "c0e47c3431f07aae",
+        "amount": 2
+      }
+    ],
+    "portion": 4,
+    "preparationTime": 40,
+    "steps": [
+      "Heat vegetable oil in a large skillet or pot over medium heat.",
+      "Add onion, garlic, and ginger. Sauté until onions are translucent and fragrant.",
+      "Add curry powder, turmeric, cumin, paprika, and coriander. Stir and cook for 1-2 minutes until spices are fragrant.",
+      "Add chicken breast cubes and cook until browned on all sides.",
+      "Pour in coconut milk and chicken broth. Season with salt and pepper.",
+      "Simmer for 20-25 minutes until the chicken is cooked through and tender.",
+      "Garnish with fresh cilantro and serve hot with rice or naan bread."
+    ],
+    "categoryId": [
+      "64gdfsbZGhb85iKa",
+      "f81sml6eD7EdtTtV"
+    ],
+    "id": "89eec27279422d2b",
+    "approved": true,
+    "date": "2023-05-24T10:52:04.676Z",
+    "image": "file_3441e35434040730.jpg"
+  },
+  {
+    "name": "Svickova",
+    "description": "muj prvni recept!!!",
+    "ingredients": [
+      {
+        "id": "Bh786kl4",
+        "amount": 5
+      }
+    ],
+    "portion": 3,
+    "preparationTime": 10,
+    "steps": [
+      "Uvarit"
+    ],
+    "categoryId": [
+      "64gdfsbZGhb85iKa"
+    ],
+    "id": "e545a908a4c840c2",
+    "approved": false,
+    "date": "2023-05-24T11:46:36.521Z",
+    "image": "file_1e3f0eec90cd7fe0.jpg"
   }
 ]
