@@ -63,6 +63,9 @@ async function CreateAbl(req, res) {
                     }
                 });
             }
+            else {
+                recipe.categoryId = [] 
+            }
             recipe = await dao.createRecipe(recipe);
             res.json(recipe);
         } else {
