@@ -1,85 +1,222 @@
 [
   {
-    "name": "Vegetable Stir-Fry",
-    "description": "A quick and healthy dish made with a variety of vegetables and stir-fry sauce.",
+    "name": "Silky Steamed Eggs",
+    "description": "These silky, savory, and warming steamed eggs are a simple comfort food I grew up eating in Taiwan. ",
     "ingredients": [
       {
         "id": "69ae472952fc0680",
         "amount": 1
-      }
-    ],
-    "portion": 1,
-    "preparationTime": 25,
-    "steps": [
-      "Heat vegetable oil in a large skillet or wok over medium-high heat.",
-      "Add garlic and onion, and sauté for 2 minutes until fragrant.",
-      "Add bell pepper, carrots, broccoli, snap peas, and mushrooms. Stir-fry for 5-6 minutes until vegetables are crisp-tender.",
-      "In a small bowl, whisk together soy sauce, oyster sauce, sesame oil, red pepper flakes, salt, and pepper.",
-      "Pour the sauce over the vegetables and stir well to coat evenly. Cook for an additional 2-3 minutes.",
-      "Serve hot and enjoy!"
-    ],
-    "id": "46191890151309e4",
-    "approved": true,
-    "date": "2023-05-19T10:31:21.624Z",
-    "image": "file_28eefc6707a079df.jpg",
-    "categoryId": [
-      "T8nFk03YrTI7l384r"
-    ]
-  },
-  {
-    "name": "Grilled Cheese Sandwich",
-    "description": "A classic sandwich with melted cheese between crispy toasted bread slices.",
-    "ingredients": [
+      },
       {
-        "id": "3b2c26aa6c6bbfcb",
+        "id": "Bh786kl4",
         "amount": 4
-      }
-    ],
-    "portion": 2,
-    "preparationTime": 10,
-    "steps": [
-      "Preheat a skillet or griddle over medium heat.",
-      "Spread butter on one side of each bread slice.",
-      "Place a slice of cheese between two slices of bread, with the buttered sides facing outwards.",
-      "Place the sandwich in the preheated skillet and cook for 2-3 minutes until the bread is golden brown.",
-      "Flip the sandwich and cook for an additional 2-3 minutes until the cheese is melted and the other side is golden brown.",
-      "Remove from heat, slice if desired, and serve hot."
-    ],
-    "id": "4d04bcc3b7a7f3f0",
-    "approved": true,
-    "date": "2023-05-19T10:38:29.116Z",
-    "image": "file_f199d377cfc2bff1.jpg",
-    "categoryId": [
-      "64gdfsbZGhb85iKa"
-    ]
-  },
-  {
-    "name": "Beef Stew",
-    "description": "A hearty stew with tender beef, vegetables, and rich flavors.",
-    "ingredients": [
+      },
       {
-        "id": "58ab7aa980710dba",
-        "amount": 2
+        "id": "43dae41abc04bef6",
+        "amount": 5
       }
     ],
-    "portion": 6,
+    "portion": 4,
     "preparationTime": 30,
     "steps": [
-      "Heat vegetable oil in a large pot or Dutch oven over medium-high heat.",
-      "Add beef stew meat and brown on all sides. Remove the meat and set it aside.",
-      "In the same pot, add onion and garlic. Sauté until onions are translucent.",
-      "Add carrots, potatoes, and celery. Cook for 5 minutes, stirring occasionally.",
-      "Return the beef to the pot. Add beef broth, red wine (if using), bay leaf, thyme, paprika, salt, and pepper.",
-      "Bring the stew to a boil, then reduce heat to low. Cover and simmer for 2-3 hours until the beef is tender.",
-      "Remove the bay leaf before serving. Serve hot and enjoy!"
+      "Place mushrooms in a medium bowl and pour in 1½ cups hot water to cover. Let sit 30 minutes to rehydrate.",
+      "Squeeze out rehydrated mushrooms over bowl to catch soaking liquid; thinly slice mushrooms.",
+      "Add eggs and hon-dashi to bowl of mushroom soaking liquid and whisk to combine. Strain through a fine-mesh sieve into a heatproof serving bowl (you will steam and serve from this bowl) to remove bubbles. Using a spoon, skim off any remaining bubbles, then gently sprinkle mushrooms over egg mixture.",
+      "Place a steaming rack or basket in a large pot with a lid (make sure your bowl will fit in the pot when covered with lid). Pour in water to come 2\" up sides of pot and bring to a simmer over medium heat. If using a Tatung steamer instead, add 1 cup water to steamer.",
+      "Carefully place bowl with egg mixture into steamer and cover immediately, leaving lid slightly askew for steam to escape. Reduce heat to medium-low and steam, adjusting heat as needed to keep water at a gentle boil, until egg mixture is set and jiggly when shaken, 12–15 minutes. If using a Tatung steamer, place bowl with egg mixture in steamer and cover with lid, propping open with a folded paper towel. Press cook switch and wait until switch bounces back, about 15 minutes."
     ],
-    "id": "11a0c0a857de2f23",
-    "approved": false,
-    "date": "2023-05-19T10:39:41.912Z",
-    "image": null,
+    "categoryId": [],
+    "id": "c980af7acd19f135",
+    "approved": true,
+    "date": "2023-05-24T07:49:58.863Z",
+    "image": "file_ea9ba2c7f9a00fec.jpg"
+  },
+  {
+    "name": "Lazy Butter Chicken",
+    "description": "The most flavourful creamy curry with a warming heat.",
+    "ingredients": [
+      {
+        "id": "d271b2333bcb07f0",
+        "amount": 400
+      },
+      {
+        "id": "29c8b7c9b7e21c8f",
+        "amount": 250
+      },
+      {
+        "id": "06248b07b391d5e1",
+        "amount": 50
+      },
+      {
+        "id": "1ea617702210baa6",
+        "amount": 3
+      },
+      {
+        "id": "d36e0fe0ec07ac08",
+        "amount": 1
+      },
+      {
+        "id": "b07d0cc0611fca1d",
+        "amount": 1000
+      },
+      {
+        "id": "435a3f5359a6349a",
+        "amount": 60
+      },
+      {
+        "id": "ce54fa8975d5e933",
+        "amount": 1
+      }
+    ],
+    "portion": 4,
+    "preparationTime": 45,
+    "steps": [
+      "Dice the onions and finely slice the garlic.",
+      "In a large pan, heat half the butter and 30ml oil and add the onions and garlic. Cook until they’re light golden.",
+      "Now go in with all of the kashmiri chilli, ground coriander and salt and cook for another 2 mins.",
+      "Add the tomatoes, cashew nuts and water and bring to a boil. Cover and let it simmer for 30 mins.",
+      "Blend with a stick blender until smooth and saucy.",
+      "Gently toast kasuri methi (fenugreek leaves) in a pan for about 3 mins until fragrant.",
+      "\nCrush in a pestle and mortar and add to the curry base along with the cinnamon, cardamom and honey.",
+      "Add the cream and butter and shred in the leftover chicken. Cook for a further 5 mins.",
+      "Serve with rice or naan bread and garnish with another drizzle of cream and a pinch of methi."
+    ],
+    "categoryId": [],
+    "id": "d83504d7e20c81f2",
+    "approved": true,
+    "date": "2023-05-24T10:08:35.072Z",
+    "image": "file_4b4fec01a4e1ae71.jpg"
+  },
+  {
+    "name": "Vegan Creamy Tofu Curry",
+    "description": "We've taken inspo from a curry favourite of ours made with halloumi, but made it vegan. Enter, Creamy Tofu Curry. Don't worry, it's just as delicious.",
+    "ingredients": [
+      {
+        "id": "42748aec81a25d0f",
+        "amount": 1
+      },
+      {
+        "id": "fb1a4f028eab69a1",
+        "amount": 1
+      },
+      {
+        "id": "db483fe0b249c8ec",
+        "amount": 1
+      },
+      {
+        "id": "e303c448a018118c",
+        "amount": 2
+      },
+      {
+        "id": "563d13b5343c30e1",
+        "amount": 1
+      },
+      {
+        "id": "2cf372a6e57ada53",
+        "amount": 1
+      },
+      {
+        "id": "bf617aece4a4ab15",
+        "amount": 1
+      },
+      {
+        "id": "b90dba67798a8aa6",
+        "amount": 40
+      },
+      {
+        "id": "3ef29a5675d58679",
+        "amount": 800
+      },
+      {
+        "id": "fb8051262111fb94",
+        "amount": 400
+      },
+      {
+        "id": "bdd8f25f5413f78f",
+        "amount": 400
+      },
+      {
+        "id": "d7f7a9b0433523e4",
+        "amount": 1
+      },
+      {
+        "id": "58ab7aa980710dba",
+        "amount": 3
+      }
+    ],
+    "portion": 4,
+    "preparationTime": 45,
+    "steps": [
+      "Chop the tofu and cauliflower into bite-sized pieces. Cut onion into slices.",
+      "Heat a large pan and add a splash of vegetable oil. Add your onions. Cook on a medium-high heat so they start catching on the pan and softening. Once the onions start to brown, add your cubes of tofu.",
+      "As the tofu starts to brown, add grated garlic cloves, a grated knob of ginger, a heaped tsp of turmeric, 1 ½ tsp of chilli powder and 2 tsp of garam masala. Mix everything together, add your cauliflower and tomato purée. Mix it in.",
+      "Pour in your tinned tomatoes and your coconut milk. Stir everything together.",
+      "Get your rice on (follow pack instructions).",
+      "Cook on a medium heat until the curry is nice and thick.",
+      "Serve the curry on top of your steaming rice. Garnish with freshly chopped coriander."
+    ],
+    "categoryId": [],
+    "id": "2b0e439b28942764",
+    "approved": true,
+    "date": "2023-05-24T10:26:44.893Z",
+    "image": "file_6640bf9532084a6f.png"
+  },
+  {
+    "name": "Rosemary Aioli BLT",
+    "description": "Level up everyone’s favourite sarnie with a homemade rosemary infused aioli. Crack open an Inch’s Cider to sip on the side.",
+    "ingredients": [
+      {
+        "id": "20392aea9a25c498",
+        "amount": 16
+      },
+      {
+        "id": "5679de7264736bf7",
+        "amount": 2
+      },
+      {
+        "id": "c7d0a9c3bf87d517",
+        "amount": 1
+      },
+      {
+        "id": "e303c448a018118c",
+        "amount": 3
+      },
+      {
+        "id": "063c7a6d36ccb43e",
+        "amount": 1
+      },
+      {
+        "id": "2920acb5937918d9",
+        "amount": 250
+      },
+      {
+        "id": "dac6b972342bfc84",
+        "amount": 4
+      },
+      {
+        "id": "b07d0cc0611fca1d",
+        "amount": 300
+      }
+    ],
+    "portion": 4,
+    "preparationTime": 25,
+    "steps": [
+      "Preheat the oven to 210°C",
+      "Lay the bacon out on a parchment-lined baking tray. Slide into the oven for 12-13 mins, flipping halfway, until rendered and very crispy.",
+      "Meanwhile, whip up the aioli. Add the yolks and dijon to the bowl of a food processor. Finely grate in the garlic and add the juice of the lemon. Season with salt and turn the processor on. Slowly stream in the oil until you have a thick, rich aioli.",
+      "Strip the leaves from half of the rosemary and finely chop. Blitz into the aioli, season to taste and you’re all done. Tip into a bowl and set aside.",
+      "Cut the tomatoes into thick slices and season very generously with olive oil, salt and pepper. Set aside to macerate.",
+      "Once the bacon is crispy, pull it out the oven and remove from the tray, leaving the fat behind. Pop the remaining rosemary onto the tray, toss in the fat and slide back into the oven for 2 mins to crisp up. Remove and set aside.",
+      "Lay out your slices of bread (toasted, if you like) and add a generous spoon of aioli to each side. Lay down the lettuce leaves and top with seasoned tomatoes. Pile on the crispy bacon and crumble over the crispy rosemary leaves.",
+      "Add a lid, cut in half and get stuck in. Pairs perfectly with an Inch’s Cider."
+    ],
     "categoryId": [
       "64gdfsbZGhb85iKa",
-      "f81sml6eD7EdtTtV"
-    ]
+      "68LorN7dG348tR4"
+    ],
+    "id": "4a7fd3be146617dc",
+    "approved": true,
+    "date": "2023-05-24T10:39:07.645Z",
+    "image": "file_e4f75bd1692803ec.png"
   }
 ]
